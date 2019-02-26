@@ -2,6 +2,7 @@ package me.Hackusate_PvP.FateHub.Commands.staff;
 
 import me.Hackusate_PvP.FateHub.Main;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -26,9 +27,11 @@ public class InfoCommand implements CommandExecutor {
                         player.openInventory(Main.getPlugin().getAPI().getInventoryManager().getInfoInventory(offplayer));
                     }
                 }
+            } else {
+                player.sendMessage(ChatColor.RED + "You do not have permission to execute this command.");
             }
         } else {
-
+            sender.sendMessage(ChatColor.DARK_RED + "You must be a player.");
         }
         return false;
     }

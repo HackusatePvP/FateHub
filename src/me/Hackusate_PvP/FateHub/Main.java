@@ -4,10 +4,7 @@ import com.bizarrealex.azazel.Azazel;
 import io.github.thatkawaiisam.assemble.Assemble;
 import io.github.thatkawaiisam.assemble.AssembleStyle;
 import lombok.Getter;
-import me.Hackusate_PvP.FateHub.Commands.player.FateHubCommand;
-import me.Hackusate_PvP.FateHub.Commands.player.LoginCommand;
-import me.Hackusate_PvP.FateHub.Commands.player.RegisterCommand;
-import me.Hackusate_PvP.FateHub.Commands.player.SettingsCommand;
+import me.Hackusate_PvP.FateHub.Commands.player.*;
 import me.Hackusate_PvP.FateHub.Commands.staff.InfoCommand;
 import me.Hackusate_PvP.FateHub.Commands.staff.StatusCommand;
 import me.Hackusate_PvP.FateHub.Listeners.Inventories.*;
@@ -74,10 +71,13 @@ public class Main extends JavaPlugin {
     private void registerCommands() {
         getCommand("fatehub").setExecutor(new FateHubCommand());
         getCommand("register").setExecutor(new RegisterCommand());
-        getCommand("login").setExecutor(new LoginCommand(this));
+        getCommand("login").setExecutor(new LoginCommand());
         getCommand("settings").setExecutor(new SettingsCommand());
         getCommand("info").setExecutor(new InfoCommand());
         getCommand("status").setExecutor(new StatusCommand());
+        getCommand("resetinventory").setExecutor(new ResetInventory());
+        getCommand("toggleplayers").setExecutor(new TogglePlayers());
+        getCommand("togglescoreboard").setExecutor(new ToggleScoreboard());
     }
 
     private void registerManagers() {

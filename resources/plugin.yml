@@ -15,3 +15,10 @@ commands:
     description: Change the status of servers.
   settings:
     description: Edit your settings
+  resetinventory:
+    aliases: [reseti]
+    description: Reset your hotbar.
+  togglescoreboard:
+    aliases: [ts, toggls]
+  toggleplayers:
+    aliases: [togglep, tpl]

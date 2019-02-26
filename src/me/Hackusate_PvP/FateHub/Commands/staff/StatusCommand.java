@@ -16,8 +16,10 @@ public class StatusCommand implements CommandExecutor {
             if (player.hasPermission("fatehub.status")) {
                 player.openInventory(Main.getPlugin().getAPI().getInventoryManager().getStatusInventory(player));
             } else {
-                player.sendMessage(ChatColor.RED + "You do not have permissions to execute this command.");
+                player.sendMessage(ChatColor.RED + "You do not have permission to execute this command.");
             }
+        }  else {
+            sender.sendMessage(ChatColor.DARK_RED + "You must be a player.");
         }
         return false;
     }

@@ -15,7 +15,7 @@ public class TabLink implements TabAdapter {
         if (Main.getPlugin().getAPI().getSettingsManager().isTablist(player)) {
             template.left(0, "&4&lServer Info");
             template.left(1, "");
-            template.left(2, "&9&lKitPvP Info");
+            template.left(2, "&9&lKitPvP &c&lInfo");
             template.left(3, "&b&lOnline: &7"); //TODO GET PLACEHOLDER
             if (api.getServerData().getConfig().getString("KitPvP.Status").equalsIgnoreCase("Offline")) {
                 template.left(4, "&b&lStatus: &cOffline");
@@ -37,7 +37,7 @@ public class TabLink implements TabAdapter {
             template.left(5, "&b&lQueue: &7" + EzQueueAPI.getPlayersInQueue("kitpvp"));
         } */
             template.left(6, "");
-            template.left(7, "&9&lHCF Info");
+            template.left(7, "&9&lHCF &c&lInfo");
             template.left(8, "&b&lOnline: &7"); //TODO GET ONLINE
             if (api.getServerData().getConfig().getString("HCF.Status").equalsIgnoreCase("Offline")) {
                 template.left(9, "&b&lStatus: &cOffline");
@@ -58,44 +58,45 @@ public class TabLink implements TabAdapter {
 
             template.middle("&4&lPlayer Info");
             template.middle(1, "");
-            template.middle(2, "&b&lName");
-            template.middle(3, "&7" + player.getName());
-            template.middle(4, "&b&lRank");
+            template.middle(2, "&9&lFate &c&lNetwork");
+            template.middle(3, "&b&lName");
+            template.middle(4, "&7" + player.getName());
+            template.middle(5, "&b&lRank");
             if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Fate")) {
-                template.middle(5, "&4" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&4" + Main.getPermissions().getPrimaryGroup(player));
             } else if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Saber")) {
-                template.middle(5, "&9" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&9" + Main.getPermissions().getPrimaryGroup(player));
             } else if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Berserker")) {
-                template.middle(5, "&6" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&6" + Main.getPermissions().getPrimaryGroup(player));
             } else if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Lancer")) {
-                template.middle(5, "&5" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&5" + Main.getPermissions().getPrimaryGroup(player));
             } else if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Assassin")) {
-                template.middle(5, "&1" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&1" + Main.getPermissions().getPrimaryGroup(player));
             } else if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Archer")) {
-                template.middle(5, "&e" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&e" + Main.getPermissions().getPrimaryGroup(player));
             } else if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Caster")) {
-                template.middle(5, "&d" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&d" + Main.getPermissions().getPrimaryGroup(player));
             } else if (Main.getPermissions().getPrimaryGroup(player).equalsIgnoreCase("Rider")) {
-                template.middle(5, "&a" + Main.getPermissions().getPrimaryGroup(player));
+                template.middle(6, "&a" + Main.getPermissions().getPrimaryGroup(player));
             } else {
-                template.middle(5, "&f&lMaster");
+                template.middle(6, "&f&lMaster");
             }
-            template.middle(6, "");
-            template.middle(7, "&9&lSettings Info");
+            template.middle(7, "");
+            template.middle(8, "&9&lSettings &c&lInfo");
             if (Main.getPlugin().getAPI().getSettingsManager().isTablist(player)) {
-                template.middle(8, "&bTablist: &a" + Main.getPlugin().getAPI().getSettingsManager().isTablist(player) + "");
+                template.middle(9, "&bTablist: &a" + Main.getPlugin().getAPI().getSettingsManager().isTablist(player) + "");
             } else {
-                template.middle(8, "&bTablist: &c" + Main.getPlugin().getAPI().getSettingsManager().isTablist(player) + "");
+                template.middle(9, "&bTablist: &c" + Main.getPlugin().getAPI().getSettingsManager().isTablist(player) + "");
             }
             if (Main.getPlugin().getAPI().getSettingsManager().hasBoard(player)) {
-                template.middle(9, "&bScoreboard: &a" + Main.getPlugin().getAPI().getSettingsManager().hasBoard(player) + "");
+                template.middle(10, "&bScoreboard: &a" + Main.getPlugin().getAPI().getSettingsManager().hasBoard(player) + "");
             } else {
-                template.middle(9, "&bScoreboard: &c" + Main.getPlugin().getAPI().getSettingsManager().hasBoard(player) + "");
+                template.middle(10, "&bScoreboard: &c" + Main.getPlugin().getAPI().getSettingsManager().hasBoard(player) + "");
             }
             if (Main.getPlugin().getAPI().getSettingsManager().isPlayersVanished(player)) {
-                template.middle(10, "&bVisibility: &a" + Main.getPlugin().getAPI().getSettingsManager().isPlayersVanished(player) + "");
+                template.middle(11, "&bVisibility: &a" + Main.getPlugin().getAPI().getSettingsManager().isPlayersVanished(player) + "");
             } else {
-                template.middle(10, "&bVisibility: &c" + Main.getPlugin().getAPI().getSettingsManager().isPlayersVanished(player) + "");
+                template.middle(11, "&bVisibility: &c" + Main.getPlugin().getAPI().getSettingsManager().isPlayersVanished(player) + "");
             }
             template.middle(19, "");
 

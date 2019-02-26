@@ -14,14 +14,6 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class LoginCommand implements CommandExecutor {
-    private Main plugin;
-    public static HashMap<UUID, Integer> attempts;
-
-    public LoginCommand(Main plugin) {
-        this.plugin = plugin;
-    }
-
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         if (sender instanceof Player) {
