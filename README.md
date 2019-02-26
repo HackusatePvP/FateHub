@@ -1,0 +1,2 @@
+# FateHub
+Nice hub plugin
