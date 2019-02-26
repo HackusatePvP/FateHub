@@ -1,0 +1,44 @@
+Tablist:
+  Name: "&9&lTablist"
+  Material: "PAINTING"
+  MaxPlayers: 120
+  Lore:
+  - ""
+  - "&b&lTab: %tabstatus%"
+  - ""
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2
+Scoreboard:
+  Name: "&9&lScoreboard"
+  Material: "ITEM_FRAME"
+  MaxPlayers: 120
+  Lore:
+  - ""
+  - "&b&lScoreboard: %sstatus%"
+  - ""
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2
+Vanish:
+  Name: "&9&lVanish"
+  Material: "POTION"
+  MaxPlayers: 120
+  Lore:
+  - ""
+  - "&b&lVisibility: %vanstatus%"
+  - ""
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2
+DJ:
+  Name: "&9&lDoubleJump"
+  Material: "IRON_BOOTS"
+  MaxPlayers: 120
+  Lore:
+  - ""
+  - "&b&lDoubleJump: %vanstatus%"
+  - ""
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2

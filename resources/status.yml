@@ -1,0 +1,22 @@
+HCF:
+  Name: "&9&lHCF"
+  Material: "DIAMOND_SWORD"
+  MaxPlayers: 120
+  Lore:
+  - "&7&m----------------------"
+  - "&b&lStatus: %hcfstatus%"
+  - "&7&m----------------------"
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2
+KitPvP:
+  Name: "&9&lKitPVP"
+  Material: "DIAMOND_SWORD"
+  Lore:
+  - "&7&m----------------------"
+  - "&b&lStatus: %kitstatus%"
+  - "&7&m----------------------"
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2
+

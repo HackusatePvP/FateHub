@@ -1,0 +1,22 @@
+Test:
+  Name: "&9&lTest &bCosmetic"
+  Material: "PAPER"
+  Lore:
+    - ""
+    - "&7&oDevelopment Item!"
+    - ""
+Fly:
+  Name: "&9&lFly &b&lCosmetic"
+  Material: "FEATHER"
+  Lore:
+    - ""
+    - "&7&oFly with the wind!"
+    - ""
+Adventure:
+  Name: "&9&lAdventure &b&lCosmetic"
+  Material: "WOOD_SWORD"
+  Lore:
+    - ""
+    - "&7&oTired of the queue"
+    - "&7&ogo out build and explore"
+    - ""

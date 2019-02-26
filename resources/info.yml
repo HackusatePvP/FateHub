@@ -1,0 +1,12 @@
+Player:
+  Lore:
+    - "&7&m------------------------"
+    - "&9&lName: &b%NAME%"
+    - "&9&lUUID: &b%UUID%"
+    - "&9&lID: &b%ID%"
+    - ""
+    - "&4&lPermissions/Punishments"
+    - "&c&lRank: &7%RANK%"
+    - "&c&lBanned: &7%BAN%"
+    - "&c&lBlacklisted: &7%BLACKLIST%"
+    - "&7&m------------------------"

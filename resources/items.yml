@@ -1,0 +1,41 @@
+Items:
+  Enderpearl:
+    Name: "&4&lEnderButt"
+    Material: "ENDER_PEARL"
+    Lore:
+      - ""
+      - "&7&oChuck to go far"
+      - ""
+    Enchantment:
+      Level: 10
+      Type: "PROTECTION_ENVIRONMENTAL"
+  Compass:
+    Name: "&4&lCompass"
+    Material: "COMPASS"
+    Lore:
+    - ""
+    - "&7&oTravel the unfamiliar world"
+    - ""
+    Enchantment:
+      Level: 10
+      Type: "PROTECTION_ENVIRONMENTAL"
+  Settings:
+    Name: "&4&lSettings"
+    Material: "PAINTING"
+    Lore:
+    - ""
+    - "&7&oChange your setting configurations"
+    - ""
+    Enchantment:
+      Level: 10
+      Type: "PROTECTION_ENVIRONMENTAL"
+  Cosmetics:
+    Name: "&4&lCosmetics"
+    Material: "ITEM_FRAME"
+    Lore:
+    - ""
+    - "&7&oSee some cool shit"
+    - ""
+    Enchantment:
+      Level: 10
+      Type: "PROTECTION_ENVIRONMENTAL"

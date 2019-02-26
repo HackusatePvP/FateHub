@@ -1,0 +1,36 @@
+HCF:
+  Name: "&9&lHCF"
+  Material: "DIAMOND_SWORD"
+  Status: "Offline"
+  MaxPlayers: 120
+  Lore:
+    - "&7----------------------"
+    - "&9Online: &c%online%&f/&c%hcfmaxplayers%"
+    - "&9Queue: &c%hcfplayersinqueue%"
+    - ""
+    - "&9Map: &cI"
+    - "&9MapKit: &cProt 2: Sharp: 2"
+    - "&a&lSOTW was on 3/4/2019"
+    - "&c&lEOTW was on 3/25/2019"
+    - "&7----------------------"
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2
+KitPvP:
+  Name: "&9&lKitPVP"
+  Material: "DIAMOND_SWORD"
+  Status: "Offline"
+  MaxPlayers: 500
+  Lore:
+  - "&7----------------------"
+  - "&9Online: &c%online%&f/&c%kitpvpmaxplayers%"
+  - "&9Queue: &c%kitpvpplayersinqueue%"
+  - ""
+  - "&9Season: &cI"
+  - "&a&lSeason starts on 3/4/2019"
+  - "&c&lSeason ends on 3/4/2020"
+  - "&7----------------------"
+  Enchantment:
+    Type: "DAMAGE_ALL"
+    Level: 2
+

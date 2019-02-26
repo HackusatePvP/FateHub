@@ -1,0 +1,17 @@
+name: FateHub
+main: me.Hackusate_PvP.FateHub.Main
+version: 1.0
+author: Hackusate_PvP
+commands:
+  register:
+    description: Protect your account safely on the server.
+  fatehub:
+    description: Base command.
+  info:
+    description: View the info of a player.
+  login:
+    description: Login into your account.
+  status:
+    description: Change the status of servers.
+  settings:
+    description: Edit your settings
