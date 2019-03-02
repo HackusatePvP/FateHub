@@ -23,10 +23,19 @@ public class CosmeticsHandler implements Listener {
                 if (event.getCurrentItem().getType() == api.getInventoryManager().getCosmetics("fly", player).getType() && event.getCurrentItem().getItemMeta().getDisplayName().equals(api.getInventoryManager().getCosmetics("fly", player).getItemMeta().getDisplayName())) {
                     if (player.getAllowFlight()) {
                         player.setAllowFlight(false);
-                        player.sendMessage(ChatColor.RED + "You can no longer fly");
+                        player.sendMessage(ChatColor.RED + "You can no longer fly.");
                     } else {
                         player.setAllowFlight(true);
-                        player.sendMessage(ChatColor.GREEN + "You can now fly");
+                        player.sendMessage(ChatColor.GREEN + "You can now fly.");
+                    }
+                }
+                if (event.getCurrentItem().getType() == api.getInventoryManager().getCosmetics("pop", player).getType() && event.getCurrentItem().getItemMeta().getDisplayName().equals(api.getInventoryManager().getCosmetics("pop", player).getItemMeta().getDisplayName())) {
+                    if (Main.getPlugin().getAPI().getSettingsManager().hasPop(player)) {
+                        Main.getPlugin().getAPI().getSettingsManager().setPop(player, false);
+                        player.sendMessage(ChatColor.RED + "You can no longer pop players.");
+                    } else {
+                        Main.getPlugin().getAPI().getSettingsManager().setPop(player, true);
+                        player.sendMessage(ChatColor.GREEN + "You can now pop players.");
                     }
                 }
             }

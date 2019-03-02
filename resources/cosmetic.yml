@@ -20,3 +20,10 @@ Adventure:
     - "&7&oTired of the queue"
     - "&7&ogo out build and explore"
     - ""
+PlayerPop:
+  Name: "&9&lPopper"
+  Material: "GOLD_SWORD"
+  Lore:
+    - ""
+    - "&7&oHit a player and pop them!"
+    - ""

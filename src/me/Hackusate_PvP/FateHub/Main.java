@@ -78,6 +78,8 @@ public class Main extends JavaPlugin {
         getCommand("resetinventory").setExecutor(new ResetInventory());
         getCommand("toggleplayers").setExecutor(new TogglePlayers());
         getCommand("togglescoreboard").setExecutor(new ToggleScoreboard());
+        getCommand("creative").setExecutor(new CreativeCommand());
+        getCommand("survival").setExecutor(new SurvivalCommand());
     }
 
     private void registerManagers() {

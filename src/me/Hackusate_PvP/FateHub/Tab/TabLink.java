@@ -58,7 +58,7 @@ public class TabLink implements TabAdapter {
 
             template.middle("&4&lPlayer Info");
             template.middle(1, "");
-            template.middle(2, "&9&lFate &c&lNetwork");
+            template.middle(2, "&9&lGeneral &c&lInfo");
             template.middle(3, "&b&lName");
             template.middle(4, "&7" + player.getName());
             template.middle(5, "&b&lRank");

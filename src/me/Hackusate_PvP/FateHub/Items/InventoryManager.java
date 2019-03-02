@@ -88,6 +88,13 @@ public class InventoryManager {
                     .setInfinityDurability().toItemStack();
             return is;
         }
+        if (cosmetics.equals("pop")) {
+            ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("PlayerPop.Material")), 1)
+                    .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("PlayerPop.Name")))
+                    .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getStringList("PlayerPop.Lore"), player))
+                    .setInfinityDurability().toItemStack();
+            return is;
+        }
 
         return null;
     }

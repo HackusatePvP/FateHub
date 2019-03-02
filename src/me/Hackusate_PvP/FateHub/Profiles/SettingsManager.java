@@ -37,4 +37,12 @@ public class SettingsManager {
         Main.getPlugin().getAPI().getPlayerData().getConfig().set(player.getUniqueId() + ".doublejump", status);
     }
 
+    public boolean hasPop(Player player) {
+        return Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".pop");
+    }
+
+    public void setPop(Player player, boolean status) {
+        Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".pop");
+    }
+
 }
