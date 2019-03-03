@@ -45,4 +45,12 @@ public class SettingsManager {
         Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".pop");
     }
 
+    public boolean hasChat(Player player) {
+        return Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".chat");
+    }
+
+    public void setChat(Player player, boolean status) {
+        Main.getPlugin().getAPI().getPlayerData().getConfig().set(player.getUniqueId() + ".chat", status);
+    }
+
 }

@@ -3,6 +3,12 @@ main: me.Hackusate_PvP.FateHub.Main
 version: 1.2
 author: Hackusate_PvP
 commands:
+  creative:
+    aliases: [gmc]
+    description: Switch gamemodes easily.
+  survival:
+    aliases: [gms]
+    description: Switch gamemodes easily.
   register:
     description: Protect your account safely on the server.
   fatehub:

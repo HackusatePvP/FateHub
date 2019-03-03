@@ -27,7 +27,6 @@ public class RegisterCommand implements CommandExecutor {
                             if (args[0].equalsIgnoreCase(args[1])) {
                                 String password = args[0];
                                 if (password.length() >= 3) {
-                                    log.info("[Debug] Password is greater than 3 char");
                                     player.sendMessage(ChatColor.GREEN + "Thank you for registering to the server.");
                                     Main.getPlugin().getAPI().getManager().setRegister(player, false);
                                     Main.getPlugin().getAPI().getRegistryData().getConfig().set(player.getUniqueId() + ".password", password);

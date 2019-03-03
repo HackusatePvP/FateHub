@@ -160,6 +160,13 @@ public class InventoryManager {
                     .setInfinityDurability().toItemStack();
             return is;
         }
+        if (settings.equals("chat")) {
+            ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Chat.Material")), 1)
+                    .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Chat.Name")))
+                    .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getMessageConfig().getConfig().getStringList("Chat.Lore"), player))
+                    .setInfinityDurability().toItemStack();
+            return is;
+        }
 
         return null;
     }

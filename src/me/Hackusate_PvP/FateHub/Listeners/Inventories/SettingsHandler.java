@@ -74,6 +74,21 @@ public class SettingsHandler implements Listener {
                         }
                     }
                 }
+                if (event.getCurrentItem().getType() == Main.getPlugin().getAPI().getInventoryManager().getSettings("chat", player).getType()) {
+                    if (event.getCurrentItem().getItemMeta().getDisplayName().equals(Main.getPlugin().getAPI().getInventoryManager().getSettings("chat", player).getItemMeta().getDisplayName())) {
+                        if (Main.getPlugin().getAPI().getSettingsManager().hasChat(player)) {
+                            Main.getPlugin().getAPI().getSettingsManager().setChat(player, false);
+                            player.updateInventory();
+                            player.sendMessage(ChatColor.RED + "You have disabled chatting.");
+                            Main.getPlugin().getAPI().getPlayerData().saveConfig();
+                        } else {
+                            Main.getPlugin().getAPI().getSettingsManager().setChat(player, true);
+                            player.updateInventory();
+                            player.sendMessage(ChatColor.GREEN + "You have enabled chatting.");
+                            Main.getPlugin().getAPI().getPlayerData().saveConfig();
+                        }
+                    }
+                }
             }
         }
     }
