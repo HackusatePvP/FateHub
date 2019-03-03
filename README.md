@@ -9,7 +9,7 @@
 *Server Selector*,
 *Player Info*,
 *Login/Registration system*,
-*Profile Manaher*,
+*Profile Manager*.
 
 
 **Configurations**
