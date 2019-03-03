@@ -20,7 +20,7 @@ public class ProfileManager implements Listener {
     private static HashSet<UUID> register = new HashSet<>();
     private static HashSet<UUID> login = new HashSet<>();
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         if (!player.hasPlayedBefore()) {
@@ -79,7 +79,7 @@ public class ProfileManager implements Listener {
         }
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
     public void onCommand(PlayerCommandPreprocessEvent event) {
         Player player = event.getPlayer();
         String message = event.getMessage();

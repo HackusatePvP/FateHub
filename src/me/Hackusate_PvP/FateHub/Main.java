@@ -98,6 +98,8 @@ public class Main extends JavaPlugin {
         manager.registerEvents(new InteractEvnt(), this);
         manager.registerEvents(new BuildEvnt(), this);
         manager.registerEvents(new ChatEvnt(), this);
+        manager.registerEvents(new ItemEvnt(), this);
+        manager.registerEvents(new MobEvnt(), this);
     }
 
     private void saveData() {

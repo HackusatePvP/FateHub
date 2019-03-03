@@ -39,7 +39,7 @@ DJ:
     Type: "DAMAGE_ALL"
     Level: 2
 Chat:
-  Name: "&9&lDoubleJump"
+  Name: "&9&lChatting"
   Material: "PAPER"
   Lore:
   - ""

@@ -48,11 +48,10 @@ public class BoardLink implements AssembleAdapter {
                 string = string.replace("%QUEUE%", EzQueueAPI.getQueue(player.getUniqueId()) + "");
                 string = string.replace("%POSITION%", EzQueueAPI.getPosition(player.getUniqueId()) + "");
                 string = string.replace("%PLAYERSINQUEUE%", EzQueueAPI.getPlayersInQueue(EzQueueAPI.getQueue(player.getUniqueId())) + "");
-            } else {
-                string = string.replace("%QUEUE%: &c%POSITION%&f/&c%PLAYERSINQUEUE%", "");
             }
-            string = string.replace("default", "master");
+            string = string.replace("%RANK%", Main.getPlugin().getAPI().getRankManager().getRank(player));
             string = string.replace("%RANK%", Main.getPermissions().getPrimaryGroup(player) + "");
+            string = string.replace("%ONLINE%", 0 + "");
             toReturn.add(string);
         }
         return toReturn;

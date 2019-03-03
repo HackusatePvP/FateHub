@@ -53,6 +53,7 @@ public class InventoryManager {
         i.setItem(0, getCosmetics("test", player));
         i.setItem(1, getCosmetics("fly", player));
         i.setItem(2, getCosmetics("adventure", player));
+        i.setItem(3, getCosmetics("pop", player));
         return i;
     }
 
@@ -63,6 +64,7 @@ public class InventoryManager {
         i.setItem(1, getSettings("scoreboard", player));
         i.setItem(2, getSettings("pvanish", player));
         i.setItem(3, getSettings("doublejump", player));
+        i.setItem(4, getSettings("chat", player));
         return i;
     }
 
@@ -71,28 +73,28 @@ public class InventoryManager {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("Test.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("Test.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getStringList("Test.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
             if (cosmetics.equals("fly")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("Fly.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("Fly.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getStringList("Fly.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
         if (cosmetics.equals("adventure")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("Adventure.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("Adventure.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getStringList("Adventure.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
         if (cosmetics.equals("pop")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("PlayerPop.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getString("PlayerPop.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getCosmeticConfig().getConfig().getStringList("PlayerPop.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
 
@@ -103,13 +105,13 @@ public class InventoryManager {
         return new ItemBuilder(Material.STONE, 1)
                 .setName(Main.getPlugin().getAPI().getCc().format("&9&l" + player.getName()))
                 .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getInfoConfig().getConfig().getStringList("Player.Lore"), player))
-                .setInfinityDurability().setSkullOwner(player.getName()).toItemStack();
+                .setSkullOwner(player.getName()).toItemStack();
     }
     public ItemStack getInfo(OfflinePlayer player) {
         return new ItemBuilder(Material.STONE, 1)
                 .setName(Main.getPlugin().getAPI().getCc().format("&9&l" + player.getName()))
                 .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getInfoConfig().getConfig().getStringList("Player.Lore"), player))
-                .setInfinityDurability().setSkullOwner(player.getName()).toItemStack();
+                .setSkullOwner(player.getName()).toItemStack();
     }
 
     public ItemStack getStatus(String server, Player player) {
@@ -117,14 +119,14 @@ public class InventoryManager {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getStatusConfig().getConfig().getString("HCF.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getStatusConfig().getConfig().getString("HCF.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getStatusConfig().getConfig().getStringList("HCF.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
         if (server.equalsIgnoreCase("kitpvp")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getStatusConfig().getConfig().getString("KitPvP.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getStatusConfig().getConfig().getString("KitPvP.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getStatusConfig().getConfig().getStringList("KitPvP.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
 
@@ -136,35 +138,35 @@ public class InventoryManager {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Tablist.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Tablist.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getMessageConfig().getConfig().getStringList("Tablist.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
         if (settings.equals("scoreboard")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Scoreboard.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Scoreboard.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getMessageConfig().getConfig().getStringList("Scoreboard.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
         if (settings.equals("pvanish")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Vanish.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Vanish.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getMessageConfig().getConfig().getStringList("Vanish.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
         if (settings.equals("doublejump")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("DJ.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("DJ.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getMessageConfig().getConfig().getStringList("DJ.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
         if (settings.equals("chat")) {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Chat.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getMessageConfig().getConfig().getString("Chat.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getMessageConfig().getConfig().getStringList("Chat.Lore"), player))
-                    .setInfinityDurability().toItemStack();
+                    .toItemStack();
             return is;
         }
 
@@ -176,7 +178,7 @@ public class InventoryManager {
             ItemStack is = new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getServerData().getConfig().getString("HCF.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getServerData().getConfig().getString("HCF.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getServerData().getConfig().getStringList("HCF.Lore"), player))
-                    .setInfinityDurability().addEnchant(Enchantment.getByName(Main.getPlugin().getAPI().getServerData().getConfig().getString("HCF.Enchantment.Type")),
+                    .addEnchant(Enchantment.getByName(Main.getPlugin().getAPI().getServerData().getConfig().getString("HCF.Enchantment.Type")),
                             Main.getPlugin().getAPI().getServerData().getConfig().getInt("HCF.Enchantment.Level")).setDurability((short) 0).toItemStack();
             return is;
         }
@@ -184,7 +186,7 @@ public class InventoryManager {
             return new ItemBuilder(Material.getMaterial(Main.getPlugin().getAPI().getServerData().getConfig().getString("KitPvP.Material")), 1)
                     .setName(Main.getPlugin().getAPI().getCc().format(Main.getPlugin().getAPI().getServerData().getConfig().getString("KitPvP.Name")))
                     .setLore(Main.getPlugin().getAPI().getCc().getFormatLines(Main.getPlugin().getAPI().getServerData().getConfig().getStringList("KitPvP.Lore"), player))
-                    .setInfinityDurability().addEnchant(Enchantment.getByName(Main.getPlugin().getAPI().getServerData().getConfig().getString("KitPvP.Enchantment.Type")),
+                    .addEnchant(Enchantment.getByName(Main.getPlugin().getAPI().getServerData().getConfig().getString("KitPvP.Enchantment.Type")),
                             Main.getPlugin().getAPI().getServerData().getConfig().getInt("KitPvP.Enchantment.Level")).setDurability((short) 0).toItemStack();
         }
         return null;

@@ -6,6 +6,7 @@ import me.Hackusate_PvP.FateHub.Items.InventoryManager;
 import me.Hackusate_PvP.FateHub.Items.ItemManager;
 import me.Hackusate_PvP.FateHub.Profiles.ProfileManager;
 import me.Hackusate_PvP.FateHub.Profiles.SettingsManager;
+import me.Hackusate_PvP.FateHub.Rank.RankManager;
 import me.Hackusate_PvP.FateHub.Utils.CC;
 import org.bukkit.Bukkit;
 
@@ -24,6 +25,7 @@ public class API {
     public InfoConfig infoConfig;
     public ItemManager itemManager;
     public InventoryManager inventoryManager;
+    public RankManager rankManager;
     public CC cc;
 
     public void registerConfigs() {
@@ -105,6 +107,7 @@ public class API {
         settingsManager = new SettingsManager();
         itemManager = new ItemManager();
         inventoryManager = new InventoryManager();
+        rankManager = new RankManager();
     }
 
 }
