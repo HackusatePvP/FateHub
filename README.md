@@ -3,6 +3,7 @@
 **Dependencies**
 The plugin reqiures the following plugins and or api's.
 *[Vault](https://dev.bukkit.org/projects/vault)*,
+*[Lombok](https://projectlombok.org/download)*,
 *[Azazel Tablist](https://github.com/bizarre/Azazel)*,
 *[Assymble Scoreboard](https://github.com/ThatKawaiiSam/Assemble)*,
 *EzQueue Bungee and Spigot (You must get these by your own means)*,
