@@ -1,5 +1,12 @@
 # FateHub
 
+**Dependencies**
+The plugin reqiures the following plugins and or api's.
+*[Vault](https://dev.bukkit.org/projects/vault)*,
+*[Azazel Tablist](https://github.com/bizarre/Azazel)*,
+*[Assymble Scoreboard](https://github.com/ThatKawaiiSam/Assemble)*,
+*EzQueue Bungee and Spigot (You must get these by your own means)*,
+
 **Features**
 *PlayerPop*,
 *Enderbutts*,
@@ -225,10 +232,3 @@ KitPvP:
     Type: "DAMAGE_ALL"
     Level: 2
 ```
-
-**Other Information**
-The plugin reqiures the following plugins and or api's.
-*Vault*,
-*Azazel Tablist*,
-*Assymble Scoreboard*,
-*EzQueue Bungee and Spigot*,
