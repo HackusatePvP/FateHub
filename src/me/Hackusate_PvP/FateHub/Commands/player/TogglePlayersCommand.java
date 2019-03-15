@@ -7,18 +7,18 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class ToggleScoreboard implements CommandExecutor {
+public class TogglePlayersCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if (Main.getPlugin().getAPI().getSettingsManager().hasBoard(player)) {
-                Main.getPlugin().getAPI().getSettingsManager().setBoard(player, false);
-                player.sendMessage(ChatColor.RED + "You have disabled your scoreboard.");
+            if (Main.getPlugin().getAPI().getSettingsManager().isPlayersVanished(player)) {
+                Main.getPlugin().getAPI().getSettingsManager().setPlayersVanished(player, false);
+                player.sendMessage(ChatColor.GREEN + "You can now see players");
             } else {
-                Main.getPlugin().getAPI().getSettingsManager().setBoard(player, true);
-                player.sendMessage(ChatColor.GREEN + "You have enabled your scoreboard.");
+                Main.getPlugin().getAPI().getSettingsManager().setPlayersVanished(player, true);
+                player.sendMessage(ChatColor.RED + "Players are now hidden.");
             }
         } else {
             sender.sendMessage(ChatColor.DARK_RED + "You must be a player.");

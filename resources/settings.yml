@@ -33,7 +33,7 @@ DJ:
   Material: "IRON_BOOTS"
   Lore:
   - ""
-  - "&b&lDoubleJump: %vanstatus%"
+  - "&b&lDoubleJump: %djtatus%"
   - ""
   Enchantment:
     Type: "DAMAGE_ALL"
@@ -43,7 +43,7 @@ Chat:
   Material: "PAPER"
   Lore:
   - ""
-  - "&b&lChatting: %vanstatus%"
+  - "&b&lChatting: %cstatus%"
   - ""
   Enchantment:
     Type: "DAMAGE_ALL"

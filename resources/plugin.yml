@@ -6,6 +6,8 @@ commands:
   creative:
     aliases: [gmc]
     description: Switch gamemodes easily.
+  cosmetic:
+    description: Opens the cosmetic gui
   survival:
     aliases: [gms]
     description: Switch gamemodes easily.
@@ -26,5 +28,7 @@ commands:
     description: Reset your hotbar.
   togglescoreboard:
     aliases: [ts, toggls]
+    description: Toggle visibility of your scoreboard
   toggleplayers:
     aliases: [togglep, tpl]
+    description: Toggle visibility of all other players

@@ -54,7 +54,7 @@ public class Main extends JavaPlugin {
         //Set Interval (Tip: 20 ticks = 1 second)
         assemble.setTicks(2);
         //Set Style (Tip: Viper Style starts at -1 and goes down)
-        assemble.setAssembleStyle(AssembleStyle.KOHI);
+        assemble.setAssembleStyle(AssembleStyle.MODERN);
         log.info("[FateHub] Loading tablist...");
         new Azazel(this, new TabLink());
         log.info("[FateHub] Done.");
@@ -76,10 +76,11 @@ public class Main extends JavaPlugin {
         getCommand("info").setExecutor(new InfoCommand());
         getCommand("status").setExecutor(new StatusCommand());
         getCommand("resetinventory").setExecutor(new ResetInventory());
-        getCommand("toggleplayers").setExecutor(new TogglePlayers());
-        getCommand("togglescoreboard").setExecutor(new ToggleScoreboard());
+        getCommand("toggleplayers").setExecutor(new TogglePlayersCommand());
+        getCommand("togglescoreboard").setExecutor(new ToggleScoreboardCommand());
         getCommand("creative").setExecutor(new CreativeCommand());
         getCommand("survival").setExecutor(new SurvivalCommand());
+        getCommand("cosmetic").setExecutor(new CosmeticCommand());
     }
 
     private void registerManagers() {

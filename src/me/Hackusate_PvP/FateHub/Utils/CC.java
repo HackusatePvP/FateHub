@@ -33,10 +33,12 @@ public class CC {
             string = string.replace("%tabstatus%", Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".tablist") + "");
             string = string.replace("%sstatus%", Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".scoreboard") + "");
             string = string.replace("%vanstatus%", Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".pvanish") + "");
+            string = string.replace("%djsatus%", Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".doublejump") + "");
+            string = string.replace("%cstatus%", Main.getPlugin().getAPI().getPlayerData().getConfig().getBoolean(player.getUniqueId() + ".chat") + "");
             string = string.replace("%kitstatus%", Main.getPlugin().getAPI().getServerData().getConfig().getString("KitPvP.Status") + "");
             string = string.replace("%hcfstatus%", Main.getPlugin().getAPI().getServerData().getConfig().getString("HCF.Status") + "");
             string = string.replace("%NAME%", player.getName() + "");
-            string = string.replace("%ID%", "");
+            string = string.replace("%ID%", Main.getPlugin().getAPI().getGenerator().getID(player) + "");
             string = string.replace("%RANK%", Main.getPermissions().getPrimaryGroup(player) + "");
             string = string.replace("%NAME%", player.getAddress().getHostString() + "");
             string = string.replace("%UUID%",player.getUniqueId() + "");
@@ -53,7 +55,7 @@ public class CC {
         for (String string : strings) {
             string = ChatColor.translateAlternateColorCodes('&', string);
             string = string.replace("%NAME%", player.getName() + "");
-            string = string.replace("%ID%", "");
+            string = string.replace("%ID%", Main.getPlugin().getAPI().getGenerator().getID(player) + "");
             string = string.replace("%RANK%", Main.getPermissions().getPrimaryGroup("world", player) + "");
             string = string.replace("%NAME%", Main.getPlugin().getAPI().getPlayerData().getConfig().getString(player.getUniqueId() + ".ip") + "");
             string = string.replace("%UUID%",player.getUniqueId() + "");

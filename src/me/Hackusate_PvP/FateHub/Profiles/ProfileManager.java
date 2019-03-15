@@ -36,6 +36,7 @@ public class ProfileManager implements Listener {
             Main.getPlugin().getAPI().getPlayerData().getConfig().set(player.getUniqueId() + "." + "tablist", true);
             Main.getPlugin().getAPI().getPlayerData().getConfig().set(player.getUniqueId() + "." + "doublejump", true);
             Main.getPlugin().getAPI().getPlayerData().getConfig().set(player.getUniqueId() + "." + "pop", false);
+            Main.getPlugin().getAPI().getGenerator().genrateID(player);
             Main.getPlugin().getAPI().getRegistryData().saveConfig();
             Main.getPlugin().getAPI().getPlayerData().saveConfig();
             Main.getPlugin().getAPI().getSettingsManager().setBoard(player, true);

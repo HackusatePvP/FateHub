@@ -8,6 +8,7 @@ import me.Hackusate_PvP.FateHub.Profiles.ProfileManager;
 import me.Hackusate_PvP.FateHub.Profiles.SettingsManager;
 import me.Hackusate_PvP.FateHub.Rank.RankManager;
 import me.Hackusate_PvP.FateHub.Utils.CC;
+import me.Hackusate_PvP.FateHub.Utils.Generator;
 import org.bukkit.Bukkit;
 
 @Getter
@@ -26,6 +27,7 @@ public class API {
     public ItemManager itemManager;
     public InventoryManager inventoryManager;
     public RankManager rankManager;
+    public Generator generator;
     public CC cc;
 
     public void registerConfigs() {
@@ -108,6 +110,7 @@ public class API {
         itemManager = new ItemManager();
         inventoryManager = new InventoryManager();
         rankManager = new RankManager();
+        generator = new Generator();
     }
 
 }
