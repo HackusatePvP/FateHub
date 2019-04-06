@@ -18,7 +18,7 @@ public class InteractEvnt implements Listener {
                     player.openInventory(Main.getPlugin().getAPI().getInventoryManager().getCosmeticsInventory(player));
                 }
                 if (event.getItem().getType() == Main.getPlugin().getAPI().getItemManager().getEnderPeal(player).getType()) {
-
+                    // Doesn't work unless this if statement is hear dk why but it just be like that sometimes
                 }
                 if (event.getItem().getType() == Main.getPlugin().getAPI().getItemManager().getSettings(player).getType() && event.getItem().getItemMeta().getDisplayName().equals(Main.getPlugin().getAPI().getItemManager().getSettings(player).getItemMeta().getDisplayName())) {
                     player.openInventory(Main.getPlugin().getAPI().getInventoryManager().getSettingsInventory(player));

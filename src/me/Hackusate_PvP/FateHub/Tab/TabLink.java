@@ -5,6 +5,7 @@ import com.bizarrealex.azazel.tab.TabAdapter;
 import com.bizarrealex.azazel.tab.TabTemplate;
 import me.Hackusate_PvP.FateHub.API;
 import me.Hackusate_PvP.FateHub.Main;
+import me.clip.placeholderapi.PlaceholderAPI;
 import me.signatured.ezqueuespigot.EzQueueAPI;
 import org.bukkit.entity.Player;
 
@@ -13,10 +14,14 @@ public class TabLink implements TabAdapter {
         TabTemplate template = new TabTemplate();
         API api = Main.getPlugin().getAPI();
         if (Main.getPlugin().getAPI().getSettingsManager().isTablist(player)) {
+            String kit = "%pinger_players_kitpvp%";
+            String kitset = PlaceholderAPI.setPlaceholders(player.getPlayer(), kit);
+            String hcf = "%pinger_players_hcf%";
+            String hcfset = PlaceholderAPI.setPlaceholders(player.getPlayer(), hcf);
             template.left(0, "&4&lServer Info");
             template.left(1, "");
             template.left(2, "&9&lKitPvP &c&lInfo");
-            template.left(3, "&b&lOnline: &7"); //TODO GET PLACEHOLDER
+            template.left(3, "&b&lOnline: &7" + kitset);
             if (api.getServerData().getConfig().getString("KitPvP.Status").equalsIgnoreCase("Offline")) {
                 template.left(4, "&b&lStatus: &cOffline");
             } else if (api.getServerData().getConfig().getString("KitPvP.Status").equalsIgnoreCase("Whitelist")) {
@@ -38,7 +43,7 @@ public class TabLink implements TabAdapter {
         } */
             template.left(6, "");
             template.left(7, "&9&lHCF &c&lInfo");
-            template.left(8, "&b&lOnline: &7"); //TODO GET ONLINE
+            template.left(8, "&b&lOnline: &7" + hcfset);
             if (api.getServerData().getConfig().getString("HCF.Status").equalsIgnoreCase("Offline")) {
                 template.left(9, "&b&lStatus: &cOffline");
             } else if (api.getServerData().getConfig().getString("HCF.Status").equalsIgnoreCase("Whitelist")) {

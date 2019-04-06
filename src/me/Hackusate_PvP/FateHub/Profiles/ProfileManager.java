@@ -53,7 +53,8 @@ public class ProfileManager implements Listener {
         } else {
             if (isRegister(player)) {
                 player.sendMessage(ChatColor.RED + "I'm afraid you didn't finish registering your account the last time you logged in. Please do /register <password <confirm password> to continue the process.");
-                setLogin(player, true);
+                setRegister(player, true);
+                //?
             }
             if (!Main.getPlugin().getAPI().getRegistryData().getConfig().getBoolean(player.getUniqueId() + "." + "register")) {
                 player.sendMessage(ChatColor.RED + "I'm afraid you didn't finish registering your account the last time you logged in. Please do /register <password <confirm password> to continue the process.");
@@ -77,6 +78,12 @@ public class ProfileManager implements Listener {
         Location to = event.getTo();
         if (isRegister(player) || (isLogin(player)) && (from.getBlockX() != to.getBlockX() || from.getBlockZ() != to.getBlockZ())) {
             event.setTo(from);
+            if (isRegister(player)) {
+                player.sendMessage(ChatColor.RED + "You need to register before continuing.");
+            }
+            if (isLogin(player)) {
+                player.sendMessage(ChatColor.RED + "You need to login in before continuing.");
+            }
         }
     }
 

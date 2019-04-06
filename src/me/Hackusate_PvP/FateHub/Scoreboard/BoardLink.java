@@ -21,7 +21,6 @@ public class BoardLink implements AssembleAdapter {
     @Override
     public List<String> getLines(Player player) {
         API api = Main.getPlugin().getAPI();
-        final List<String> toReturn = new ArrayList<>();
         if (api.getSettingsManager().hasBoard(player)) {
             if (api.getManager().isRegister(player)) {
                 return getFormatLines(api.getScoreboardConfig().getConfig().getStringList("Board.Type.Register"), player);

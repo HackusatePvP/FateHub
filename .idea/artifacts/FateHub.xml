@@ -3,8 +3,8 @@
     <output-path>$PROJECT_DIR$/out/artifacts/FateHub</output-path>
     <root id="archive" name="FateHub.jar">
       <element id="module-output" name="GIT" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../Assemble-master/target/assemble-1.0-SNAPSHOT.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Downloads/Azazel-1.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Plugin Projects/Assemble-master/target/assemble-1.0-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../dep/Azazel-1.0-SNAPSHOT.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
