@@ -6,6 +6,7 @@ The plugin reqiures the following plugins and or api's.
 *[Lombok](https://projectlombok.org/download)*,
 *[Azazel Tablist](https://github.com/bizarre/Azazel)*,
 *[Assymble Scoreboard](https://github.com/ThatKawaiiSam/Assemble)*,
+*[PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)*,
 *EzQueue Bungee and Spigot (You must get these by your own means)*,
 
 **Features**
